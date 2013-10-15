@@ -1,0 +1,157 @@
+  [1m[36m (18.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (52.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-03 17:01:36 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/stephen/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.0/lib/rails/templates/rails/welcome/index.html.erb (2.1ms)
+Completed 200 OK in 77ms (Views: 48.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2013-10-03 17:02:13 -0400
+Processing by Rails::InfoController#properties as HTML
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  Rendered /home/stephen/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.0/lib/rails/templates/rails/info/properties.html.erb (1.0ms)
+Completed 200 OK in 34ms (Views: 17.7ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-03 17:14:33 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 529ms (Views: 509.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-03 17:14:34 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-03 17:14:34 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-03 17:14:34 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-03 17:14:34 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-03 17:14:34 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-03 17:14:34 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-03 17:14:34 -0400
+  [1m[36m (19.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (55.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (8.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (52.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (7.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('0')
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (18.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (49.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateProducts (20131014192632)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (89.8ms)[0m  [1mCREATE TABLE "products" ("id" serial primary key, "name" character varying(255), "description" text, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20131014192632"]]
+  [1m[36m (12.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (10.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (54.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20131015202643)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20131015202643)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20131015202643)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20131015202643)
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20131015202643)
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20131015202643)
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20131015202643)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20131015202643)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20131015202643)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20131015202643)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (283.2ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "firstName" character varying(255) NOT NULL, "lastName" character varying(255) NOT NULL, "middleName" character varying(255), "DOB" timestamp, "sex" character varying(1), "cAddress" character varying(255), "email" character varying(255) NOT NULL, "telephone" character varying(25), "race" character varying(255), "ethnicity" character varying(255), "nationality" character varying(255), "occupation" character varying(255), "YOD" timestamp, "birthOrigin" character varying(255), "houseSize" integer, "groupHouse" character varying(255), "biologicalParent" character varying(255), "gestation" character varying(255), "births" integer, "eyeColor" character varying(255), "contact" character varying(1), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (30.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20131015202643"]]
+  [1m[36m (19.8ms)[0m  [1mCOMMIT[0m
+Migrating to AddDeviseToUsers (20131015205652)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "users" ADD COLUMN "email" character varying(255) DEFAULT '' NOT NULL[0m
+PG::DuplicateColumn: ERROR:  column "email" of relation "users" already exists
+: ALTER TABLE "users" ADD COLUMN "email" character varying(255) DEFAULT '' NOT NULL
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddDeviseToUsers (20131015205652)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "users" ADD COLUMN "email" character varying(255) DEFAULT '' NOT NULL[0m
+PG::DuplicateColumn: ERROR:  column "email" of relation "users" already exists
+: ALTER TABLE "users" ADD COLUMN "email" character varying(255) DEFAULT '' NOT NULL
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddDeviseToUsers (20131015205652)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (81.5ms)[0m  [1mALTER TABLE "users" ADD COLUMN "email" character varying(255) DEFAULT '' NOT NULL[0m
+  [1m[35m (76.7ms)[0m  ALTER TABLE "users" ADD COLUMN "encrypted_password" character varying(255) DEFAULT '' NOT NULL
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD COLUMN "reset_password_token" character varying(255)[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" ADD COLUMN "reset_password_sent_at" timestamp
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "users" ADD COLUMN "remember_created_at" timestamp[0m
+  [1m[35m (89.1ms)[0m  ALTER TABLE "users" ADD COLUMN "sign_in_count" integer DEFAULT 0 NOT NULL
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD COLUMN "current_sign_in_at" timestamp[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD COLUMN "last_sign_in_at" timestamp
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD COLUMN "current_sign_in_ip" character varying(255)[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "users" ADD COLUMN "last_sign_in_ip" character varying(255)
+  [1m[36m (35.1ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (28.9ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20131015205652"]]
+  [1m[35m (15.9ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-15 17:28:40 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 163ms (Views: 139.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-15 17:28:41 -0400
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-10-15 17:28:41 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-15 17:28:41 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-15 17:28:41 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-15 17:28:41 -0400
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-10-15 17:28:41 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-15 17:28:41 -0400
