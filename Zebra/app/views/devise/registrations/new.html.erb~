@@ -12,7 +12,6 @@
   <div><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></div>
 
-  <div><%= f.label :firstName %><br />
   <%= f.text_field :firstName %></div>
 
   <div><%= f.label :lastName %><br />
