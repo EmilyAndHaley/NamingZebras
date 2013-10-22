@@ -47,10 +47,8 @@ end
 # Use RubyRacer
 gem 'therubyracer'
 
-# Use Bootstrap
-gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
-                          :github => 'anjlab/bootstrap-rails'
-gem 'bootstrap_helper'
-
 # Use Devise
 gem 'devise'
+
+# User Bootstrap
+gem 'bootstrap-sass'
