@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<JDBOR date="2013-09-01 04:12:31" version="1.0.20 [2012-12-14]" copyright="Orphanet (c) 2013">
+  <DisorderList count="6760">
+    <Disorder id="17601">
+      <OrphaNumber>166024</OrphaNumber>
+      <Name lang="en">Multiple epiphyseal dysplasia, Al-Gazali type</Name>
+      <DisorderSignList count="18">
+        <DisorderSign>
+          <ClinicalSign id="2040">
+            <Name lang="en">Macrocephaly/macrocrania/megalocephaly/megacephaly</Name>
+          </ClinicalSign>
+          <SignFreq id="640">
+            <Name lang="en">Very frequent</Name>
+          </SignFreq>
+        </DisorderSign>
+        <DisorderSign>
+          <ClinicalSign id="2640">
+            <Name lang="en">Frontal bossing/prominent forehead</Name>
+          </ClinicalSign>
+          <SignFreq id="640">
+            <Name lang="en">Very frequent</Name>
+          </SignFreq>
+        </DisorderSign>
+        <DisorderSign>
+          <ClinicalSign id="3320">
+            <Name lang="en">Hypertelorism</Name>
+          </ClinicalSign>
+          <SignFreq id="640">
+            <Name lang="en">Very frequent</Name>
+          </SignFreq>
+        </DisorderSign>
+        <DisorderSign>
+          <ClinicalSign id="3580">
+            <Name lang="en">Flat cheek bones/malar hypoplasia</Name>
+          </ClinicalSign>
+          <SignFreq id="640">
+            <Name lang="en">Very frequent</Name>
+          </SignFreq>
+        </DisorderSign>
+        <DisorderSign>
+          <ClinicalSign id="13040">
+            <Name lang="en">Low set ears/posteriorly rotated ears</Name>
+          </ClinicalSign>
+          <SignFreq id="640">
+            <Name lang="en">Very frequent</Name>
+          </SignFreq>
+        </DisorderSign>
+        <DisorderSign>
+          <ClinicalSign id="14150">
+            <Name lang="en">Short neck</Name>
+          </ClinicalSign>
+          <SignFreq id="640">
+            <Name lang="en">Very frequent</Name>
+          </SignFreq>
+        </DisorderSign>
+        <DisorderSign>
+          <ClinicalSign id="15680">
+            <Name lang="en">Pectus excavatum</Name>
+          </ClinicalSign>
+          <SignFreq id="640">
+            <Name lang="en">Very frequent</Name>
+          </SignFreq>
+        </DisorderSign>
+        <DisorderSign>
+          <ClinicalSign id="20340">
+            <Name lang="en">Spindle shaped fingers</Name>
+          </ClinicalSign>
+          <SignFreq id="640">
+            <Name lang="en">Very frequent</Name>
+          </SignFreq>
+        </DisorderSign>
+        <DisorderSign>
+          <ClinicalSign id="20440">
+            <Name lang="en">Syndactyly of fingers/interdigital palm</Name>
+          </ClinicalSign>
+          <SignFreq id="640">
+            <Name lang="en">Very frequent</Name>
+          </SignFreq>
+        </DisorderSign>
+        <DisorderSign>
+          <ClinicalSign id="20640">
+            <Name lang="en">Clinodactyly of fingers 1,2,3,4/overlapping fingers</Name>
+          </ClinicalSign>
+          <SignFreq id="640">
+            <Name lang="en">Very frequent</Name>
+          </SignFreq>
+        </DisorderSign>
+        <DisorderSign>
+          <ClinicalSign id="21440">
+            <Name lang="en">Genu valgum</Name>
+          </ClinicalSign>
+          <SignFreq id="640">
+            <Name lang="en">Very frequent</Name>
+          </SignFreq>
+        </DisorderSign>
+        <DisorderSign>
+          <ClinicalSign id="45750">
+            <Name lang="en">Epiphyseal anomaly</Name>
+          </ClinicalSign>
+          <SignFreq id="640">
+            <Name lang="en">Very frequent</Name>
+          </SignFreq>
+        </DisorderSign>
+        <DisorderSign>
+          <ClinicalSign id="46120">
+            <Name lang="en">Osteoarthritis</Name>
+          </ClinicalSign>
+          <SignFreq id="640">
+            <Name lang="en">Very frequent</Name>
+          </SignFreq>
+        </DisorderSign>
+        <DisorderSign>
+          <ClinicalSign id="46280">
+            <Name lang="en">Joint/articular deformation</Name>
+          </ClinicalSign>
+          <SignFreq id="640">
+            <Name lang="en">Very frequent</Name>
+          </SignFreq>
+        </DisorderSign>
+        <DisorderSign>
+          <ClinicalSign id="52120">
+            <Name lang="en">Autosomal recessive inheritance</Name>
+          </ClinicalSign>
+          <SignFreq id="640">
+            <Name lang="en">Very frequent</Name>
+          </SignFreq>
+        </DisorderSign>
+        <DisorderSign>
+          <ClinicalSign id="42420">
+            <Name lang="en">Cortical atrophy without hydrocephaly/cerebral hemiatrophy/subcortical atrophy</Name>
+          </ClinicalSign>
+          <SignFreq id="646">
+            <Name lang="en">Frequent</Name>
+          </SignFreq>
+        </DisorderSign>
+        <DisorderSign>
+          <ClinicalSign id="42630">
+            <Name lang="en">Corpus callosum/septum pellucidum total/partial agenesis</Name>
+          </ClinicalSign>
+          <SignFreq id="646">
+            <Name lang="en">Frequent</Name>
+          </SignFreq>
+        </DisorderSign>
+        <DisorderSign>
+          <ClinicalSign id="53100">
+            <Name lang="en">Generalized obesity</Name>
+          </ClinicalSign>
+          <SignFreq id="646">
+            <Name lang="en">Frequent</Name>
+          </SignFreq>
+        </DisorderSign>
+      </DisorderSignList>
+    </Disorder>
+  </DisorderList>
+</JDBOR>

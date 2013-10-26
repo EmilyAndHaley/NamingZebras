@@ -4,20 +4,25 @@
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+<form role="form">
+  <div class="form-group">
+    <div><label for="exampleInputEmail1"> <%= f.label :email, "Email Address" %></label>
+    <%= f.email_field :email, :autofocus => true %>
+    
+    <%#<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email"></input> %>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+    <div><label for="exampleInputEmail1"> <%= f.label :password %></label>
+    <%= f.password_field :password %></div>
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
+    <div><label for="exampleInputEmail1"> <%= f.label :password_confirmation, "Password Confirmation" %></label>
+    <%= f.password_field :password_confirmation %></div>
 
-  <div><%= f.label :firstName %><br />
-  <%= f.text_field :firstName %></div>
+    <div><label for="exampleInputEmail1"> <%= f.label :firstName, "First Name" %></label>
+    <%= f.text_field :firstName %></div>
 
-  <div><%= f.label :lastName %><br />
-  <%= f.text_field :lastName %></div>
+    <div><label for="exampleInputEmail1"> <%= f.label :lastName, "Last Name" %></label>
+    <%= f.text_field :lastName %></div>
 
-  <div><%= f.submit "Sign up" %></div>
+    <div><%= f.submit "Sign up" %></div>
+  </div>
 <% end %>
