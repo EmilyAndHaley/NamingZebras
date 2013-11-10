@@ -21,7 +21,6 @@ class CreateUsers < ActiveRecord::Migration
       t.integer :births
       t.string :eyeColor
       t.string :contact, limit: 1
-
       t.timestamps
     end
   end

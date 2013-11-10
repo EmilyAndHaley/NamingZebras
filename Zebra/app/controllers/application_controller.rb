@@ -20,8 +20,7 @@ class ApplicationController < ActionController::Base
       }
     end
   end
-
-
+  
   private
 
   # Overwriting the sign_out redirect path method

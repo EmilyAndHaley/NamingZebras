@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131015205652) do
+ActiveRecord::Schema.define(version: 20131105013923) do
+
+  create_table "diseases", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "symptoms", force: true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "signid"
+  end
 
   create_table "users", force: true do |t|
     t.string   "firstName",                                      null: false
@@ -50,5 +64,27 @@ ActiveRecord::Schema.define(version: 20131015205652) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "users_diseases", force: true do |t|
+    t.integer  "users_id"
+    t.integer  "disease_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "users_diseases", ["disease_id"], name: "index_users_diseases_on_disease_id", using: :btree
+  add_index "users_diseases", ["users_id"], name: "index_users_diseases_on_users_id", using: :btree
+
+  create_table "users_symptoms", force: true do |t|
+    t.integer  "users_id"
+    t.integer  "symptoms_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.date     "startDate"
+    t.integer  "frequency"
+  end
+
+  add_index "users_symptoms", ["symptoms_id"], name: "index_users_symptoms_on_symptoms_id", using: :btree
+  add_index "users_symptoms", ["users_id"], name: "index_users_symptoms_on_users_id", using: :btree
 
 end

@@ -52,3 +52,6 @@ gem 'devise'
 
 # User Bootstrap
 gem 'bootstrap-sass'
+
+# User nokogiri
+gem 'nokogiri'

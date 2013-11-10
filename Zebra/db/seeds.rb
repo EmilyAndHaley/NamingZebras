@@ -1,7 +1,13 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+require 'nokogiri'
+
+sympFile = File.open("Dataset.xml")
+@doc = Nokogiri::XML(sympFile)
+sympFile.close()
+puts 'hello'
+symptomsList = []
+
+@doc.xpath("////DisorderSign").each do |x|
+	signId = x.at('ClinicalSign').attribute('id').text()
+	name = x.at('ClinicalSign').element_children().text()
+	Symptom.where(:name => name, :signid => Integer(signId)).first_or_create
+end

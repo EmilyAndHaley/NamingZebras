@@ -2,9 +2,12 @@ require 'nokogiri'
 
 sympFile = File.open("Test.xml")
 @doc = Nokogiri::XML(sympFile)
-sympFile.close
+sympFile.close()
 
-@doc.xpath("//Disorder").each do |x|
-	orphanumber = x.at('OrphaNumber').text
-	puts "Orphanumber: #{orphanumber}"
+symptoms = []
+
+@doc.xpath("////DisorderSign").each do |x|
+	signId = x.at('ClinicalSign').attribute('id').text()
+	name = x.at('ClinicalSign').element_children().text()
+	symptoms.push([signId, name])
 end
