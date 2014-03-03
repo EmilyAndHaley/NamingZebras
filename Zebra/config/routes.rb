@@ -10,6 +10,7 @@ Zebra::Application.routes.draw do
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
   match '/home',    to: 'static_pages#home   ', via: 'get'
+  match '/suggestions', to: 'application#suggestions', via: 'get'
   devise_for :users
 
   # Example of regular route:
