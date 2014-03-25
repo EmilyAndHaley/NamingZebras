@@ -1,1 +1,0 @@
-#define XAPIAN_BINDINGS_VERSION "1.2.17"

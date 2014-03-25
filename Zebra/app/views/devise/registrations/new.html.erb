@@ -6,22 +6,21 @@
 
 <form role="form">
   <div class="form-group">
-    <div><label for="exampleInputEmail1"> <%= f.label :email, "Email Address" %></label>
-    <%= f.email_field :email, :autofocus => true, :placeholder => "Enter Email" %>
-
-    <div><label for="exampleInputPassword"> <%= f.label :password %></label>
+    <label for="exampleInputEmail1" class="col-sm-2 control-label"> <%= f.label :email, "Email Address" %></label>
+    <%= f.email_field :email, :autofocus => true, :placeholder => "Enter Email" %></div>
+  <div class="form-group">
+    <label for="exampleInputPassword" class="col-sm-2 control-label"> <%= f.label :password %></label>
     <%= f.password_field :password, :placeholder => "Password" %></div>
-
-    <div><label for="exampleInputPassConfirmation"> <%= f.label :password_confirmation, "Password Confirmation" %></label>
+  <div class="form-group">
+    <label for="exampleInputPassConfirmation" class="col-sm-2 control-label"> <%= f.label :password_confirmation, "Password Confirmation" %></label>
     <%= f.password_field :password_confirmation, :placeholder => "Password" %></div>
-
-    <div><label for="exampleInputFirst"> <%= f.label :firstName, "First Name" %></label>
+  <div class="form-group">
+    <label for="exampleInputFirst" class="col-sm-2 control-label"> <%= f.label :firstName, "First Name" %></label>
     <%= f.text_field :firstName, :placeholder => "First Name" %></div>
-
-    <div><label for="exampleInputLast"> <%= f.label :lastName, "Last Name" %></label>
+  <div class="form-group">
+    <label for="exampleInputLast" class="col-sm-2 control-label"> <%= f.label :lastName, "Last Name" %></label>
     <%= f.text_field :lastName, :placeholder => "Last Name" %></div>
-
-    <div><%= f.submit "Sign up" %></div>
-  </div>
+  <div class="form-group">
+    <%= f.submit "Sign up" %></div>
 </form>
 <% end %>

@@ -1,17 +1,15 @@
 <%= provide(:title, 'Home') %>
 <div class="center hero-unit">
-  <h1>Home Page</h1>
+	<div class="well">
+  		<h1>Do You Have A Rare Disease?</h1>
+  
+	  	<h2>
+	    	This is the home page for the
+	    	<a href="http://github.com/EmilyAndHaley/NamingZebras">Naming Zebras</a>
+	    	application. <br> <br>
+	      	<%= link_to "Sign up now!", "/users/sign_up", class: "btn btn-primary" if !current_user %>
+	  	</h2>
 
-  <h2>
-    This is the home page for the
-    <a href="http://github.com/EmilyAndHaley/NamingZebras">Naming Zebras</a>
-    application.
-  </h2>
-
-  <%= link_to "Sign up now!", "/users/sign_up", class: "btn btn-large btn-primary" if !current_user %>
-
-  <div class="example example-countries">
-      <input class="typeahead" type="text" placeholder="Typeahead">
-      <button type="submit" class="btn btn-default">Submit</button>
+	  <%= link_to image_tag("logo.jpg", alt: "You're Missing Something")%>
   </div>
 </div>

@@ -1,56 +1,33 @@
 $(document).ready(function() {
-  var numbers, countries;
+  var symptoms;
 
-/*// instantiate the bloodhound suggestion engine
-var numbers = new Bloodhound({
-datumTokenizer: function(d) { return Bloodhound.tokenizers.whitespace(d.num); },
-queryTokenizer: Bloodhound.tokenizers.whitespace,
-local: [
-{ num: 'one' },
-{ num: 'two' },
-{ num: 'three' },
-{ num: 'four' },
-{ num: 'five' },
-{ num: 'six' },
-{ num: 'seven' },
-{ num: 'eight' },
-{ num: 'nine' },
-{ num: 'ten' }
-]
-});
- 
-// initialize the bloodhound suggestion engine
-numbers.initialize();
- 
-// instantiate the typeahead UI
-$('.example-numbers .typeahead').typeahead(null, {
-displayKey: 'num',
-source: numbers.ttAdapter()
-});
-*/
-
-  var countries = new Bloodhound({
-    datumTokenizer: function(d) { return Bloodhound.tokenizers.whitespace(d.name); },
+  var symptoms = new Bloodhound({
+    datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
     queryTokenizer: Bloodhound.tokenizers.whitespace,
     limit: 10,
     prefetch: {
-    url: 'http://localhost:3000/suggestions',
+      // url points to a json file that contains an array of symptom names, see
+      url: '/suggestions.json',
+      // the json file contains an array of strings, but the Bloodhound
+      // suggestion engine expects JavaScript objects so this converts all of
+      // those strings
       filter: function(list) {
-        nameArray = [];
-        for( var i = 0; i < list.length; ++i){
-          nameArray.push(list[i].name);
-        }
-        window.alert(nameArray)
-        return nameArray;
+        return $.map(list, function(symptom) { return { name: symptom }; });
       }
     }
   });
- 
-  countries.initialize();
- 
-  $('.example-countries .typeahead').typeahead(null, {
+   
+  // kicks off the loading/processing of `local` and `prefetch`
+  symptoms.initialize();
+   
+  // passing in `null` for the `options` arguments will result in the default
+  // options being used
+  $('#prefetch .typeahead').typeahead(null, {
     name: 'symptoms',
-    source: countries.ttAdapter()
+    displayKey: 'name',
+    // `ttAdapter` wraps the suggestion engine in an adapter that
+    // is compatible with the typeahead jQuery plugin
+    source: symptoms.ttAdapter()
   });
 
 });

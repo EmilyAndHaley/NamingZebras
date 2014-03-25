@@ -1,2 +1,29 @@
-<h1>Symptoms#current</h1>
-<p>Find me in app/views/symptoms/current.html.erb</p>
+<%= provide(:title, 'Symptoms') %>
+<h1>Symptoms</h1>
+<p>
+	Below is a list of symptoms that you are experiencing.
+</p>
+
+<p>
+  Add a symptom.
+</p>
+<div id="prefetch">
+  <input class="typeahead" type="text" placeholder="Symptom">
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Symptom</th>
+      <th>Start Date </th>
+      <th>Uploaded at</th>
+      <th>Frequency</th>
+      <th>Actions</th>
+    </tr>
+      <tbody>
+
+
+  </tbody>
+  </thead>
+
+
+</table>

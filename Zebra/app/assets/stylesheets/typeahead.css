@@ -55,8 +55,8 @@ p {
 .tt-hint {
   width: 396px;
   height: 30px;
-  padding: 8px 12px;
-  font-size: 24px;
+  padding: 2px 12px;
+  font-size: 20px;
   line-height: 30px;
   border: 2px solid #ccc;
   -webkit-border-radius: 8px;
@@ -85,7 +85,7 @@ p {
 
 .tt-dropdown-menu {
   width: 422px;
-  margin-top: 12px;
+  margin-top: 24px;
   padding: 8px 0;
   background-color: #fff;
   border: 1px solid #ccc;

@@ -1,8 +1,0 @@
-common/msvc_dirent.lo: common/msvc_dirent.cc /usr/include/stdc-predef.h \
- /usr/include/x86_64-linux-gnu/bits/predefs.h config.h
-
-/usr/include/stdc-predef.h:
-
-/usr/include/x86_64-linux-gnu/bits/predefs.h:
-
-config.h:

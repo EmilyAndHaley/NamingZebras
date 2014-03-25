@@ -1,50 +1,53 @@
+<%= provide(:title, 'Edit Profile') %>
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
   <%= devise_error_messages! %>
-
-  <div><label for="exampleInputEmail1"> <%= f.label :email, "Email Address" %></label>
-  <%= f.email_field :email, :autofocus => true, :value => current_user.email %>
+<form role = "form">
+  <div class = "form-group">
+  <label for="exampleInputEmail1" class="col-sm-2 control-label"> <%= f.label :email, "Email Address" %></label>
+  <%= f.email_field :email, :autofocus => true, :value => current_user.email %></div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
-
-  <div><label for="exampleInputPassword"> <%= f.label :password %></label>
+<div class = "form-group">
+  <label for="exampleInputPassword" class="col-sm-2 control-label"> <%= f.label :password %></label>
     <%= f.password_field :password, :autocomplete => "off", :placeholder => "Password" %><i>(leave blank if you don't want to change it)</i>
   </div>
-
-  <div><label for="exampleInputPassConfirmation"> <%= f.label :password_confirmation, "Password Confirmation" %></label>
+<div class = "form-group">
+  <label for="exampleInputPassConfirmation" class="col-sm-2 control-label"> <%= f.label :password_confirmation, "Password Confirmation" %></label>
   <%= f.password_field :password_confirmation, :placeholder => "Password" %> </div>
-
-  <div><label for="exampleCurentPassword"> <%= f.label :current_password_, "Current Password" %></label>
+<div class = "form-group">
+  <label for="exampleCurentPassword" class="col-sm-2 control-label"> <%= f.label :current_password_, "Current Password" %></label>
   <%= f.password_field :current_password, :placeholder => "Password" %> </div>
-
-  <div><label for="exampleFirstName"> <%= f.label :firstName, "First Name" %></label>
+<div class = "form-group">
+  <label for="exampleFirstName" class="col-sm-2 control-label"> <%= f.label :firstName, "First Name" %></label>
   <%= f.text_field :firstName, :placeholder => "First Name" %> </div>
-
-  <div><label for="exampleLastName"> <%= f.label :lastName, "Last Name" %></label>
+<div class = "form-group">
+  <label for="exampleLastName" class="col-sm-2 control-label"> <%= f.label :lastName, "Last Name" %></label>
   <%= f.text_field :lastName, :placeholder => "First Name" %> </div>
-
-  <div><label for="exampleMiddleName"> <%= f.label :middleName, "Middle Name" %></label>
+<div class = "form-group">
+  <label for="exampleMiddleName" class="col-sm-2 control-label"> <%= f.label :middleName, "Middle Name" %></label>
   <%= f.text_field :middleName, :placeholder => "Middle Name" %> </div> 
 
+  
   <div class="input-append date" id="dpYears" data-date="12-02-2012" data-date-format="dd-mm-yyyy" data-date-viewmode="years">
-      <label for="exampleDOB"> <%= f.label :DOB, "Date Of Birth" %></label>
+    <div class = "form-group">
+      <label for="exampleDOB" class="col-sm-2 control-label"> <%= f.label :DOB, "Date Of Birth" %></label>
       <%= f.date_field :DOB, placeholder: "Birth Date" %> 
       <span class="add-on"><i class="icon-calendar"></i></span>
-  </div>
+    </div>
   <script>
     $(function(){
       $('#dpYears').datepicker();
     });
   </script>
-
+  </div>
   <div><%= f.submit "Update" %></div>
 <% end %>
+</form>
 
 <h3>Cancel my account</h3>
 
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %></p>
-
-<%= link_to "Back", :back %>
