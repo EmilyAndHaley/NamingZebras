@@ -30,19 +30,14 @@
 <div class = "form-group">
   <label for="exampleMiddleName" class="col-sm-2 control-label"> <%= f.label :middleName, "Middle Name" %></label>
   <%= f.text_field :middleName, :placeholder => "Middle Name" %> </div> 
-
-  
+ <div class = "form-group">    
   <div class="input-append date" id="dpYears" data-date="12-02-2012" data-date-format="dd-mm-yyyy" data-date-viewmode="years">
-    <div class = "form-group">
       <label for="exampleDOB" class="col-sm-2 control-label"> <%= f.label :DOB, "Date Of Birth" %></label>
       <%= f.date_field :DOB, placeholder: "Birth Date" %> 
-      <span class="add-on"><i class="icon-calendar"></i></span>
-    </div>
-  <script>
-    $(function(){
-      $('#dpYears').datepicker();
-    });
-  </script>
+     <button type="button" class="add-on">
+  <span class="glyphicon glyphicon-calendar"></span>
+</button>
+</div>
   </div>
   <div><%= f.submit "Update" %></div>
 <% end %>
@@ -51,3 +46,11 @@
 <h3>Cancel my account</h3>
 
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %></p>
+<link rel="stylesheet" href="css/bootstrap.css">
+<%= javascript_include_tag "bootstrap-datepicker.js" %>
+<link rel="stylesheet" href="css/datepicker.css">
+<script>
+  $(function(){
+    $('#dpYears').datepicker();
+  });
+</script>

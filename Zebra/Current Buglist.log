@@ -1,6 +1,6 @@
 Current Bugs:
 
 -CSS for forms
--CSS for date of birth icon
+-CSS for date of birth icon --Fixed by changing to glyphicons, bootstrap updated icons in BS 3.0 4/12/14
 -Colors on input fields
--Typeahead requiring refresh
+-Typeahead requiring refresh --Fixed by loading javascript per page instead of using turbolinks 4/2/14

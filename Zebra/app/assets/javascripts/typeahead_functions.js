@@ -30,4 +30,6 @@ $(document).ready(function() {
     source: symptoms.ttAdapter()
   });
 
+ 
+
 });
